@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,15 +38,20 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.katalogButton = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.carRentSystemDataSet = new CarRentSystem.CarRentSystemDataSet();
+            this.usersTableAdapter = new CarRentSystem.CarRentSystemDataSetTableAdapters.usersTableAdapter();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carRentSystemDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 141);
+            this.label1.Location = new System.Drawing.Point(154, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(551, 118);
             this.label1.TabIndex = 0;
@@ -60,7 +66,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label2);
             this.flowLayoutPanel1.Controls.Add(this.usernameTextBox);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(232, 259);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(232, 271);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
@@ -94,7 +100,7 @@
             this.flowLayoutPanel2.Controls.Add(this.label3);
             this.flowLayoutPanel2.Controls.Add(this.passwordTextBox);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(232, 345);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(232, 357);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
@@ -125,24 +131,38 @@
             this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginButton.AutoSize = true;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(368, 445);
+            this.loginButton.Location = new System.Drawing.Point(368, 457);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(122, 38);
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // katalogButton
             // 
             this.katalogButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.katalogButton.AutoSize = true;
             this.katalogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.katalogButton.Location = new System.Drawing.Point(349, 489);
+            this.katalogButton.Location = new System.Drawing.Point(349, 501);
             this.katalogButton.Name = "katalogButton";
             this.katalogButton.Size = new System.Drawing.Size(161, 38);
             this.katalogButton.TabIndex = 4;
             this.katalogButton.Text = "Lihat Katalog";
             this.katalogButton.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // carRentSystemDataSet
+            // 
+            this.carRentSystemDataSet.DataSetName = "CarRentSystemDataSet";
+            this.carRentSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // Login
             // 
@@ -160,6 +180,8 @@
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carRentSystemDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +198,8 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button katalogButton;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private CarRentSystemDataSet carRentSystemDataSet;
+        private CarRentSystemDataSetTableAdapters.usersTableAdapter usersTableAdapter;
     }
 }
