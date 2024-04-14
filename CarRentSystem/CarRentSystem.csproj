@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarRentSystemDataSet.cs">
+      <DependentUpon>CarRentSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CarRentSystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,22 +67,215 @@
     <Compile Include="Dashboard\DashboardAdmin.Designer.cs">
       <DependentUpon>DashboardAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\DashboardAdminData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardAdminData.Designer.cs">
+      <DependentUpon>DashboardAdminData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardKaryawan.Designer.cs">
+      <DependentUpon>DashboardKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardKaryawanData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardKaryawanData.Designer.cs">
+      <DependentUpon>DashboardKaryawanData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Katalog\KatalogMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Katalog\KatalogMain.Designer.cs">
+      <DependentUpon>KatalogMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Management\CarSeat\CarSeatAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\CarSeat\CarSeatAdd.Designer.cs">
+      <DependentUpon>CarSeatAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\CarSeat\CarSeatEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\CarSeat\CarSeatEdit.Designer.cs">
+      <DependentUpon>CarSeatEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\CarSeat\CarSeatManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\CarSeat\CarSeatManagement.Designer.cs">
+      <DependentUpon>CarSeatManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Mobil\MobilAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Mobil\MobilAdd.Designer.cs">
+      <DependentUpon>MobilAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Mobil\MobilEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Mobil\MobilEdit.Designer.cs">
+      <DependentUpon>MobilEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Mobil\MobilManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Mobil\MobilManagement.Designer.cs">
+      <DependentUpon>MobilManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Pelanggan\PelangganAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Pelanggan\PelangganAdd.Designer.cs">
+      <DependentUpon>PelangganAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Pelanggan\PelangganEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Pelanggan\PelangganEdit.Designer.cs">
+      <DependentUpon>PelangganEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Pelanggan\PelangganManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Pelanggan\PelangganManagement.Designer.cs">
+      <DependentUpon>PelangganManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\RiwayatTransaksi\RiwayatTransaksiManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\RiwayatTransaksi\RiwayatTransaksiManagement.Designer.cs">
+      <DependentUpon>RiwayatTransaksiManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tipe Identitas\TipeIdentitasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Tipe Identitas\TipeIdentitasAdd.Designer.cs">
+      <DependentUpon>TipeIdentitasAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tipe Identitas\TipeIdentitasEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Tipe Identitas\TipeIdentitasEdit.Designer.cs">
+      <DependentUpon>TipeIdentitasEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tipe Identitas\TipeIdentitasManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\Tipe Identitas\TipeIdentitasManagement.Designer.cs">
+      <DependentUpon>TipeIdentitasManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\User\UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\User\UserAdd.Designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\User\UserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\User\UserEdit.Designer.cs">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\User\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\User\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs" />
+    <Compile Include="PictureBoxTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PictureBoxTest.Designer.cs">
+      <DependentUpon>PictureBoxTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Auth\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\DashboardAdmin.resx">
       <DependentUpon>DashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardAdminData.resx">
+      <DependentUpon>DashboardAdminData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardKaryawan.resx">
+      <DependentUpon>DashboardKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardKaryawanData.resx">
+      <DependentUpon>DashboardKaryawanData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\CarSeat\CarSeatAdd.resx">
+      <DependentUpon>CarSeatAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\CarSeat\CarSeatEdit.resx">
+      <DependentUpon>CarSeatEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\CarSeat\CarSeatManagement.resx">
+      <DependentUpon>CarSeatManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Mobil\MobilAdd.resx">
+      <DependentUpon>MobilAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Mobil\MobilEdit.resx">
+      <DependentUpon>MobilEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Mobil\MobilManagement.resx">
+      <DependentUpon>MobilManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Pelanggan\PelangganAdd.resx">
+      <DependentUpon>PelangganAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Pelanggan\PelangganEdit.resx">
+      <DependentUpon>PelangganEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Pelanggan\PelangganManagement.resx">
+      <DependentUpon>PelangganManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\RiwayatTransaksi\RiwayatTransaksiManagement.resx">
+      <DependentUpon>RiwayatTransaksiManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Tipe Identitas\TipeIdentitasAdd.resx">
+      <DependentUpon>TipeIdentitasAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Tipe Identitas\TipeIdentitasEdit.resx">
+      <DependentUpon>TipeIdentitasEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Tipe Identitas\TipeIdentitasManagement.resx">
+      <DependentUpon>TipeIdentitasManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\User\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\User\UserEdit.resx">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\User\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureBoxTest.resx">
+      <DependentUpon>PictureBoxTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +287,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Settings\ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="CarRentSystemDataSet.xsc">
       <DependentUpon>CarRentSystemDataSet.xsd</DependentUpon>
     </None>
@@ -117,6 +317,17 @@
   <ItemGroup>
     <None Include="Resources\Users_logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\trash-can-icon-28689.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-icon-png-3602.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\RiwayatTransaksi\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -51,7 +51,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 153);
+            this.label1.Location = new System.Drawing.Point(139, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(551, 118);
             this.label1.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label2);
             this.flowLayoutPanel1.Controls.Add(this.usernameTextBox);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(232, 271);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(217, 228);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
@@ -100,7 +100,7 @@
             this.flowLayoutPanel2.Controls.Add(this.label3);
             this.flowLayoutPanel2.Controls.Add(this.passwordTextBox);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(232, 357);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(217, 314);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
@@ -131,7 +131,7 @@
             this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginButton.AutoSize = true;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(368, 457);
+            this.loginButton.Location = new System.Drawing.Point(353, 414);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(122, 38);
             this.loginButton.TabIndex = 3;
@@ -144,7 +144,7 @@
             this.katalogButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.katalogButton.AutoSize = true;
             this.katalogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.katalogButton.Location = new System.Drawing.Point(349, 501);
+            this.katalogButton.Location = new System.Drawing.Point(334, 458);
             this.katalogButton.Name = "katalogButton";
             this.katalogButton.Size = new System.Drawing.Size(161, 38);
             this.katalogButton.TabIndex = 4;
@@ -168,14 +168,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 692);
+            this.ClientSize = new System.Drawing.Size(828, 606);
             this.Controls.Add(this.katalogButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);

@@ -13,6 +13,7 @@ namespace CarRentSystem
 {
     public partial class MainForm : Form
     {
+        public int loginId;
         public MainForm()
         {
             InitializeComponent();
@@ -21,9 +22,10 @@ namespace CarRentSystem
         public void Login_User(int userId, int level)
         {
             mainPanel.Controls.Clear();
-            if (userId == 1)
+            if (level == 1)
             {
-                DashboardAdmin dashboardAdmin = new DashboardAdmin
+                loginId = userId;
+                DashboardAdmin dashboardAdmin = new DashboardAdmin(loginId)
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -32,6 +34,19 @@ namespace CarRentSystem
                 };
                 mainPanel.Controls.Add(dashboardAdmin);
                 dashboardAdmin.Show();
+            }
+            else
+            {
+                loginId = userId;
+                DashboardKaryawan dashboardKaryawan = new DashboardKaryawan(loginId)
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    TopMost = true,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+                mainPanel.Controls.Add(dashboardKaryawan);
+                dashboardKaryawan.Show();
             }
         }
 
